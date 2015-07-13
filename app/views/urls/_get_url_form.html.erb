@@ -1,0 +1,8 @@
+<%= form_for url, method: :get, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :url, 'Find the original URL from a shortened URL' %>
+    <%= f.text_field :url, class: 'form-control', placeholder: "Enter a shortened URL..." %>
+    </br>
+    <%= f.submit "Submit", class: 'btn btn-default' %>
+  </div>
+<% end %>

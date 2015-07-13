@@ -1,0 +1,41 @@
+<!-- Call to Action Well -->
+<div class="row">
+  <div class="col-md-8">
+    <div class="well text-center">
+      <%= render partial: 'url_form', locals: { url: @new_url } %>
+    </div>
+  </div>
+  <!-- /.col-md-8 -->
+
+  <div class="col-md-4">
+    <div class="well">
+      <strong>Shortened URL</strong>
+      <div class="new-url">
+        <%= render partial: 'new_url', locals: { url: @new_url } %>
+      </div>
+    </div>
+  </div>
+  <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
+
+<!-- Content Row -->
+<div class="row">
+  <div class="col-md-8">
+    <div class="well text-center">
+      <%= render partial: 'get_url_form', locals: { url: @new_url } %>
+    </div>
+  </div>
+  <!-- /.col-md-8 -->
+  <div class="col-md-4">
+    <div class="well">
+      <strong>Original URL</strong>
+      <div class="original-url">
+        <%= render partial: 'show_url', locals: { url: @new_url } %>
+      </div>
+    </div>
+  </div>
+  <!-- /.col-md-4 -->
+
+</div>
+<!-- /.row -->
