@@ -14,4 +14,13 @@
 //= requrie bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require growlyflash
 //= require_tree .
+
+jQuery(function() {
+  return $(document).on("touchstart.alert click.alert", ".growlyflash", function(e) {
+    e.stopPropagation();
+    ($(this)).remove();
+    return false;
+  });
+});

@@ -6,7 +6,6 @@ class UrlsController < ApplicationController
       respond_to do |format|
         format.html
         format.js
-        binding.pry
       end
     else
       flash[:error] = "URL creation unsuccessful. Pro tip: URLs cannot be blank."
@@ -22,9 +21,14 @@ class UrlsController < ApplicationController
   def show
     @url = Url.find_by(shortened_url: url_params[:url].strip.gsub('0', 'O'))
 
-    respond_to do |format|
-      format.html
-      format.js
+    if @url
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    else
+      flash[:error] = "URL not found.  Check spelling and try again."
+      render nothing: true
     end
   end
 
