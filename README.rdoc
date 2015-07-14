@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Rails app to practice AJAX and keep my chops up.
 
-Things you may want to cover:
+Features:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* O and 0 are treated identically for ease of use
+* URLs will be regenerated if they differ by one character
+* URLs will not contain a list of inappropriate words
+* White spaces are trimmed to ensure the URL is found correctly
+* Errors for blank or invalid URLs
+* Growlyflash used for errors
+* AJAX used to make single page app that does not require reloading
+* JSON API added just in case...you never know
